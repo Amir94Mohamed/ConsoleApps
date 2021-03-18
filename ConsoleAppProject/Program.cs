@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Runtime;
 using ConsoleAppProject.App01;
-using ConsoleAppProject.App03;
 using ConsoleAppProject.Helpers;
 
 
@@ -20,20 +18,25 @@ namespace ConsoleAppProject
     {
         public static void Main(string[] args)
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Red;
             
             Console.WriteLine("BNU CO453 Applications Programming 2020-2021!");
+            //Console.Beep();
             Console.WriteLine();
+            Console.WriteLine(GetHeading("Convert Distances"));
 
-            // Using an extension method for each enumeration
-            Console.WriteLine("Using MyEnum Extension Method!\n");
-            Console.WriteLine("MyEnum Value = " + MyEnum.FirstValue);
-            Console.WriteLine("MyEnum Friendly Value = " + MyEnum.FirstValue.EnumValue());
-            Console.WriteLine();
+            DistanceConverter converter = new DistanceConverter();
 
-            // Using an extension method for any enumeration
-            StudentGrades grades = new StudentGrades();
-            grades.TestGradesEnumeration();
         }
+
+        private static string GetHeading(string title)
+         {
+             return "--------------------------------------------\n"
+                      + "\t\t" + title
+                      + "\n\t\tAmir Mohamed" +
+                    "\n---------------------------------------------\n";
+         }
+
+
     }
 }
