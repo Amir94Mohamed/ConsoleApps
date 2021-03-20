@@ -1,7 +1,6 @@
-﻿using System;
-using ConsoleAppProject.App01;
-using ConsoleAppProject.Helpers;
-
+﻿using ConsoleAppProject.App01;
+using ConsoleAppProject.App02;
+using System;
 
 namespace ConsoleAppProject
 {
@@ -13,30 +12,39 @@ namespace ConsoleAppProject
     /// This Project has been modified by:
     /// Amir Mohamed 18/03/2021
     /// </summary>
-
     public static class Program
     {
+        private static DistanceConverter converter = new DistanceConverter();
+        private static BMI calculator = new BMI();
         public static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            
-            Console.WriteLine("BNU CO453 Applications Programming 2020-2021!");
-            //Console.Beep();
-            Console.WriteLine();
-            Console.WriteLine(GetHeading("Convert Distances"));
 
-            DistanceConverter converter = new DistanceConverter();
+            Console.WriteLine("----------------------------------------------");
+            Console.WriteLine("BNU CO453 Applications Programming 2020-2021!");
+            Console.WriteLine("----------------------------------------------");
+            Console.WriteLine();
+
+            Console.WriteLine("1. Distance Converter");
+            Console.WriteLine("2. BMI Calculator");
+            Console.WriteLine();
+
+            Console.WriteLine("Please choose which app you would like to choose from > ");
+            string choice = Console.ReadLine();
+
+            if (choice == "1")
+            {
+                converter.ConvertDistance();
+            }
+            else if (choice == "2")
+            {
+                calculator.BMICalculation();
+            }
+            else
+            {
+                Console.WriteLine("Invalid Choice");
+            }
 
         }
-
-        private static string GetHeading(string title)
-         {
-             return "--------------------------------------------\n"
-                      + "\t\t" + title
-                      + "\n\t\tAmir Mohamed" +
-                    "\n---------------------------------------------\n";
-         }
-
-
     }
 }
