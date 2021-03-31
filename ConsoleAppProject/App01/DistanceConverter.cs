@@ -57,7 +57,7 @@ namespace ConsoleAppProject.App01
         }
 
         /// <summary>
-        /// Here it will calculate the distance
+        /// Here is where the distance is calculated
         /// </summary>
         private void CalculateDistance()
         {
