@@ -23,7 +23,7 @@ namespace ConsoleAppProject.App02
         private double metricBMI;
 
         /// <summary>
-        /// Here it will output the heading
+        /// Here it will print the heading
         /// </summary>
         public void OutputHeading()
         {

@@ -10,7 +10,7 @@ namespace ConsoleAppProject
     /// to start Apps 01 to 05 for CO453 CW1
     /// 
     /// This Project has been modified by:
-    /// Amir Mohamed 18/03/2021
+    /// Amir Mohamed 18/03/2021.
     /// </summary>
     public static class Program
     {

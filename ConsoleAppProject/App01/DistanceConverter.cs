@@ -201,7 +201,7 @@ namespace ConsoleAppProject.App01
         {
             Console.WriteLine("\n------------------------------------------");
             Console.WriteLine("\n------------Distance Converter------------");
-            Console.WriteLine("\n------------By Amir Mohamed----------------");
+            Console.WriteLine("\n------------By Amir Mohamed---------------");
             Console.WriteLine("\n------------------------------------------");
         }
 
