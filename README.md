@@ -4,7 +4,7 @@
 **Name**: | Amir Mohamed |
 **Student ID**: | 21905318 |
 **Course:** | Software Engineering |
-**Module**: | CO453     |
+**Module**: | CO453  Application Programming |
 **Started**: | January 2021 |    
 
 1. App01: Distance Converter
