@@ -143,7 +143,7 @@ namespace ConsoleAppProject.App02
             metricBMI = (kg) / (metres * metres);
         }
         /// <summary>
-        /// here the BMI results appear and it tells the user if they are underweight or overweight or obese class 1 to 3 
+        /// here the BMI result will discover if you are underweight, overweight, normal or which obese class 1 to 3
         /// </summary>
         /// <param name="BMI"></param>
         private void BMIResults(double BMI)
@@ -187,7 +187,7 @@ namespace ConsoleAppProject.App02
             }
         }
         /// <summary>
-        /// here in this method it will print the BAME. 
+        /// this method it will print the BAME. 
         /// </summary>
         private void PrintBAME()
         {
