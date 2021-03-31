@@ -6,7 +6,7 @@ namespace ConsoleAppProject
 {
     /// <summary>
     /// The main method in this class is called first
-    /// when the application is started.  It will be used
+    /// when the application isMetric Test 6 started.  It will be used
     /// to start Apps 01 to 05 for CO453 CW1
     /// 
     /// This Project has been modified by:
@@ -21,7 +21,7 @@ namespace ConsoleAppProject
             Console.ForegroundColor = ConsoleColor.Red;
 
             Console.WriteLine("----------------------------------------------");
-            Console.WriteLine("BNU CO453 Applications Programming 2020-2021!");
+            Console.WriteLine("BNU CO453 Applications Programming 2020-2021  ");
             Console.WriteLine("----------------------------------------------");
             Console.WriteLine();
 
