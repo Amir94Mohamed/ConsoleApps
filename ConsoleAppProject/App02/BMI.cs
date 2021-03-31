@@ -6,10 +6,10 @@ namespace ConsoleAppProject.App02
     /// </summary>
     /// <author>
     /// Student Amir Mohamed V1
+    /// Amir Mohamed version 0.1
     /// </author>
     public class BMI
     {
-
         private string unitType;
         private double feet;
         private double inches;
@@ -31,8 +31,8 @@ namespace ConsoleAppProject.App02
             Console.WriteLine("------Body Mass Index Calculator------");
             Console.WriteLine("-----------By Amir Mohamed------------");
             Console.WriteLine("--------------------------------------");
-
         }
+
         /// <summary>
         /// Here in this method where the BMI will calculate itself.
         /// </summary>
@@ -58,6 +58,7 @@ namespace ConsoleAppProject.App02
             }
             PrintBAME();
         }
+
         /// <summary>
         /// In this method it will give the user options to enter his weight in metric unit
         /// </summary>
@@ -70,6 +71,7 @@ namespace ConsoleAppProject.App02
             kg = Convert.ToDouble(Console.ReadLine());
 
         }
+
         /// <summary>
         /// In this method it will give the user options to enter his height in metric unit
         /// </summary>
@@ -81,6 +83,7 @@ namespace ConsoleAppProject.App02
             Console.Write(" Enter your height in Metres > ");
             metres = Convert.ToDouble(Console.ReadLine());
         }
+
         /// <summary>
         /// In this method it will give the user options to enter his height in imperial unit
         /// </summary>
@@ -97,6 +100,7 @@ namespace ConsoleAppProject.App02
             Console.Write(" Enter your height in inches > ");
             inches = Convert.ToDouble(Console.ReadLine());
         }
+
         /// <summary>
         /// In this method it will give the user options to enter his weight in imperial unit
         /// </summary>
@@ -111,6 +115,7 @@ namespace ConsoleAppProject.App02
             Console.Write(" Enter your weight in pounds > ");
             pounds = Convert.ToDouble(Console.ReadLine());
         }
+
         /// <summary>
         /// Here the user will choose which unit they would like to choose
         /// </summary>
@@ -122,6 +127,7 @@ namespace ConsoleAppProject.App02
             Console.Write(" Please input your choice > ");
             unitType = Console.ReadLine();
         }
+
         /// <summary>
         /// Here is whre the imperial calculation happens
         /// </summary>
@@ -135,6 +141,7 @@ namespace ConsoleAppProject.App02
 
             imperialBMI = (weightImperial * 703) / (heightImperial * heightImperial);
         }
+
         /// <summary>
         /// here is where the metric calculation happens
         /// </summary>
@@ -142,6 +149,7 @@ namespace ConsoleAppProject.App02
         {
             metricBMI = (kg) / (metres * metres);
         }
+
         /// <summary>
         /// here the BMI result will discover if you are underweight, overweight, normal or which obese class 1 to 3
         /// </summary>
@@ -186,6 +194,7 @@ namespace ConsoleAppProject.App02
                 Console.WriteLine(" You are OBESE CLASS 3! ");
             }
         }
+
         /// <summary>
         /// this method it will print the BAME. 
         /// </summary>
