@@ -10,17 +10,18 @@ namespace ConsoleAppProject.App02
     /// </author>
     public class BMI
     {
+
         private string unitType;
-        private double feet;
-        private double inches;
-        private double stones;
-        private double pounds;
-        private double kg;
-        private double metres;
-        private double weightImperial;
-        private double heightImperial;
-        private double imperialBMI;
-        private double metricBMI;
+        public double Feet { get; set; }
+        public double Inches { get; set; }
+        public double Stones { get; set; }
+        public double Pounds { get; set; }
+        public double Kilograms { get; set; }
+        public double Metres { get; set; }
+        public double weightImperial;
+        public double heightImperial;
+        public double imperialBMI;
+        public double metricBMI;
 
         /// <summary>
         /// Here it will print the heading
@@ -68,7 +69,7 @@ namespace ConsoleAppProject.App02
             Console.WriteLine();
 
             Console.Write(" Enter your weight in KG > ");
-            kg = Convert.ToDouble(Console.ReadLine());
+            Kilograms = Convert.ToDouble(Console.ReadLine());
 
         }
 
@@ -81,7 +82,7 @@ namespace ConsoleAppProject.App02
             Console.WriteLine();
 
             Console.Write(" Enter your height in Metres > ");
-            metres = Convert.ToDouble(Console.ReadLine());
+            Metres = Convert.ToDouble(Console.ReadLine());
         }
 
         /// <summary>
@@ -95,10 +96,10 @@ namespace ConsoleAppProject.App02
             Console.Write(" Enter your height in feet > ");
 
 
-            feet = Convert.ToDouble(Console.ReadLine());
+            Feet = Convert.ToDouble(Console.ReadLine());
 
             Console.Write(" Enter your height in inches > ");
-            inches = Convert.ToDouble(Console.ReadLine());
+            Inches = Convert.ToDouble(Console.ReadLine());
         }
 
         /// <summary>
@@ -110,10 +111,10 @@ namespace ConsoleAppProject.App02
             Console.WriteLine();
 
             Console.Write(" Enter your weight in stones > ");
-            stones = Convert.ToDouble(Console.ReadLine());
+            Stones = Convert.ToDouble(Console.ReadLine());
 
             Console.Write(" Enter your weight in pounds > ");
-            pounds = Convert.ToDouble(Console.ReadLine());
+            Pounds = Convert.ToDouble(Console.ReadLine());
         }
 
         /// <summary>
@@ -129,15 +130,15 @@ namespace ConsoleAppProject.App02
         }
 
         /// <summary>
-        /// Here is whre the imperial calculation happens
+        /// Here is where the imperial calculation happens
         /// </summary>
-        private void ImperialCalculation()
+        public void ImperialCalculation()
         {
-            double newPounds = stones * 14;
-            weightImperial = pounds + newPounds;
+            double newPounds = Stones * 14;
+            weightImperial = Pounds + newPounds;
 
-            double newInches = feet * 12;
-            heightImperial = inches + newInches;
+            double newInches = Feet * 12;
+            heightImperial = Inches + newInches;
 
             imperialBMI = (weightImperial * 703) / (heightImperial * heightImperial);
         }
@@ -145,16 +146,16 @@ namespace ConsoleAppProject.App02
         /// <summary>
         /// here is where the metric calculation happens
         /// </summary>
-        private void MetricCalculation()
+        public void MetricCalculation()
         {
-            metricBMI = (kg) / (metres * metres);
+            metricBMI = (Kilograms) / (Metres * Metres);
         }
 
         /// <summary>
         /// here the BMI result will discover if you are underweight, overweight, normal or which obese class 1 to 3
         /// </summary>
         /// <param name="BMI"></param>
-        private void BMIResults(double BMI)
+        public void BMIResults(double BMI)
         {
             BMI = Math.Round(BMI, 2);
             if (BMI <= 18.5)
@@ -198,7 +199,7 @@ namespace ConsoleAppProject.App02
         /// <summary>
         /// this method it will print the BAME. 
         /// </summary>
-        private void PrintBAME()
+        public void PrintBAME()
         {
             Console.WriteLine("If you are Black, Asian or other ethnic groups,\n\r" +
                               "you have a higher risk.\n\r\n\r" +
