@@ -15,7 +15,7 @@ namespace ConsoleAppProject.App03
         public const int LowestGradeC = 50;
         public const int LowestGradeB = 60;
         public const int LowestGradeA = 70;
-        public const int HighestMark = 100;
+        public const int HighestMark = 101;
         private readonly string[] Classification = new string[] {"First Class", "Upper Second Class",
         "Lower Second Class", "Third Class", "Fail",};
 
@@ -104,11 +104,13 @@ namespace ConsoleAppProject.App03
             Console.WriteLine(" Stats of Mean, Maximum and Minimum marks ");
             Console.WriteLine("------------------------------------------");
             Console.WriteLine();
-            Console.WriteLine($"Mean {Mean} ");
+            Console.WriteLine("        | Mark      ");
             Console.WriteLine();
-            Console.WriteLine($"Maximum {Maximum} ");
+            Console.WriteLine($"Mean    | {Mean}    ");
             Console.WriteLine();
-            Console.WriteLine($"Minimum {Minimum} ");
+            Console.WriteLine($"Maximum | {Maximum} ");
+            Console.WriteLine();
+            Console.WriteLine($"Minimum | {Minimum} ");
             Console.WriteLine("--------------------------------");
 
 
