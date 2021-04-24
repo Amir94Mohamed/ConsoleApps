@@ -21,11 +21,11 @@ namespace ConsoleAppProject.App01
         public const string METRES = "Metres";
         public const string MILES = "Miles";
 
-        public double FromDistance;
-        public double ToDistance;
+        public double FromDistance { get; set; }
+        public double ToDistance { get; set; }
 
-        public string FromUnit;
-        public string ToUnit;
+        public string FromUnit { get; set; }
+        public string ToUnit { get; set; }
 
         /// <summary>
         /// Here is the Distance Converter which chooses the from unit and to unit
@@ -59,7 +59,7 @@ namespace ConsoleAppProject.App01
         /// <summary>
         /// Here it will calculate the distance
         /// </summary>
-        private void CalculateDistance()
+        public void CalculateDistance()
         {
             CalculationMilesToFeet();
             CalculationMetresToMiles();
