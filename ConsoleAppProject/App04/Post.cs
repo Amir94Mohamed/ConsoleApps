@@ -9,13 +9,17 @@ namespace ConsoleAppProject.App04
 
         private readonly List<String> comments;
 
+        public int Id { get; set; }
+
 
         // username of the post's author
-
         public String Username { get; }
 
         public DateTime Timestamp { get; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public Post(string author)
         {
             this.Username = author;
@@ -83,6 +87,7 @@ namespace ConsoleAppProject.App04
                 Console.WriteLine($"    {comments.Count}  comment(s). Click here to view.");
             }
         }
+
         ///<summary>
         /// Create a string describing a time point in the past in terms 
         /// relative to current time, such as "30 seconds ago" or "7 minutes ago".

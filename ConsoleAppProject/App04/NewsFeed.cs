@@ -31,9 +31,11 @@ namespace ConsoleAppProject.App04
         {
             posts = new List<Post>();
 
+            Console.WriteLine();
             MessagePost post = new MessagePost(AUTHOR, "Testing posts");
             AddMessagePost(post);
 
+            Console.WriteLine();
             PhotoPost photoPost = new PhotoPost(AUTHOR, "Photo1.jpg", "Image 1 TESTING");
             AddPhotoPost(photoPost);
         }
@@ -41,23 +43,47 @@ namespace ConsoleAppProject.App04
 
         ///<summary>
         /// Add a text post to the news feed.
-        /// 
-        /// @param text  The text post to be added.
         ///</summary>
         public void AddMessagePost(MessagePost message)
         {
+            message.Id = posts.Count + 1;
             posts.Add(message);
         }
 
         ///<summary>
         /// Add a photo post to the news feed.
-        /// 
-        /// @param photo  The photo post to be added.
         ///</summary>
         public void AddPhotoPost(PhotoPost photo)
         {
+            photo.Id = posts.Count + 1;
             posts.Add(photo);
         }
+
+        /// <summary>
+        /// Liking a post 
+        /// </summary>
+        public void LikePost(Post post)
+        {
+            foreach (var currentPost in posts)
+            {
+                if (currentPost.Id == post.Id)
+                    currentPost.Like();
+            }
+
+        }
+
+        /// <summary>
+        /// Unliking a post
+        /// </summary>
+        public void UnlikePost(Post post)
+        {
+            foreach (var currentPost in posts)
+            {
+                if (currentPost.Id == post.Id)
+                    currentPost.Unlike();
+            }
+        }
+
 
         ///<summary>
         /// Show the news feed. Currently: print the news feed details to the
@@ -73,6 +99,16 @@ namespace ConsoleAppProject.App04
                 Console.WriteLine();
             }
         }
+
+
+        /// <summary>
+        /// Gets the list of posts
+        /// </summary>
+        public List<Post> GetPosts()
+        {
+            return posts;
+        }
+
     }
 
 }

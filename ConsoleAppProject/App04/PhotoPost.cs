@@ -14,7 +14,6 @@ namespace ConsoleAppProject.App04
     public class PhotoPost : Post
     {
 
-
         // the name of the image file
         public String Filename { get; set; }
         
@@ -43,6 +42,7 @@ namespace ConsoleAppProject.App04
         /// </summary>
         public override void Display()
         {
+            Console.WriteLine("PhotoPost Display Method");
             Console.WriteLine($" Filename: {Filename}");
             Console.WriteLine($" Caption: {Caption}");
 
