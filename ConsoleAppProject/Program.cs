@@ -1,6 +1,7 @@
 using ConsoleAppProject.App01;
 using ConsoleAppProject.App02;
 using ConsoleAppProject.App03;
+using ConsoleAppProject.App04;
 using System;
 
 namespace ConsoleAppProject
@@ -18,6 +19,8 @@ namespace ConsoleAppProject
         private static DistanceConverter converter = new DistanceConverter();
         private static BMI calculator = new BMI();
         private static StudentGrades studentGrades = new StudentGrades();
+        private static NetworkApp app04 = new NetworkApp();
+
         public static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Red;
@@ -30,7 +33,9 @@ namespace ConsoleAppProject
             Console.WriteLine("1. Distance Converter");
             Console.WriteLine("2. BMI Calculator");
             Console.WriteLine("3. Student Marks");
+            Console.WriteLine("4. Social Network");
             Console.WriteLine();
+
 
 
             Console.WriteLine("Please choose which app you would like to choose from > ");
@@ -47,6 +52,10 @@ namespace ConsoleAppProject
             else if (choice == "3")
             {
                 studentGrades.RunStudentGrades();
+            }
+            else if (choice == "4")
+            {
+                app04.DisplayMenu();
             }
             else
             {

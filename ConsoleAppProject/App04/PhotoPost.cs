@@ -37,6 +37,17 @@ namespace ConsoleAppProject.App04
             this.Caption = caption;
 
         }
-        
+
+        /// <summary>
+        /// This method overrides the display method to ensure its the correct one for a photo or a message post.
+        /// </summary>
+        public override void Display()
+        {
+            Console.WriteLine($" Filename: {Filename}");
+            Console.WriteLine($" Caption: {Caption}");
+
+            base.Display();
+        }
+
     }
 }

@@ -31,5 +31,15 @@ namespace ConsoleAppProject.App04
 
         }
 
+        /// <summary>
+        /// This method overrides the display method to ensure its the correct one for a photo or a message post.
+        /// </summary>
+        public override void Display()
+        {
+            Console.WriteLine($" Message: {Message}");
+
+            base.Display();
+        }
+
     }
 }

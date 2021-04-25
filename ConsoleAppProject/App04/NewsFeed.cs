@@ -20,6 +20,8 @@ namespace ConsoleAppProject.App04
     ///</author> 
     public class NewsFeed
     {
+        public const string AUTHOR = "Amir";
+
         private readonly List<Post> posts;
 
         ///<summary>
@@ -28,6 +30,12 @@ namespace ConsoleAppProject.App04
         public NewsFeed()
         {
             posts = new List<Post>();
+
+            MessagePost post = new MessagePost(AUTHOR, "Testing posts");
+            AddMessagePost(post);
+
+            PhotoPost photoPost = new PhotoPost(AUTHOR, "Photo1.jpg", "Image 1 TESTING");
+            AddPhotoPost(photoPost);
         }
 
 
@@ -61,7 +69,8 @@ namespace ConsoleAppProject.App04
             foreach (Post post in posts)
             {
                 post.Display();
-                Console.WriteLine();   // empty line between posts
+                Console.WriteLine();
+                Console.WriteLine();
             }
         }
     }
